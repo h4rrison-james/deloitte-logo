@@ -1,0 +1,118 @@
+// HTML Reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+	margin: 0
+	padding: 0
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+body
+	line-height: 1
+
+blockquote, q
+	quotes: none
+
+blockquote
+	&:before, &:after
+	content: none
+
+q
+	&:before, &:after
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+*
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+.group
+	&:before
+	content: ""
+	display: table
+	&:after
+	content: ""
+	display: table
+	clear: both
+	zoom: 1
+
+body
+	font: 16px / 1 "Helvetica Neue", Helvetica, Arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	text-rendering: optimizeLegibility
+	height: 100%
+	color: #777
+
+p
+	line-height: 1.8
+
+strong
+	font-weight: 500
+	color: #444
+
+a
+	text-decoration: none
+	color: #5badf0
+
+#wrapper
+	margin: 0 auto
+	width: 100%
+	height: 100%
+	text-align: center
+
+// Horizontally and vertically centers the text
+
+.center
+	margin: 0 auto
+	position: relative
+	top: 50%
+	-webkit-transform: translateY(-50%)
+	-ms-transform: translateY(-50%)
+	transform: translateY(-50%)
+
+#badge
+	position: absolute
+	bottom: 10px
+	right: 10px
+	height: 48px
+	width: 48px
+
+// Deloitte Logo
+
+$blue: #254087
+$green: #96cb3c
+$time: 3s
+
+svg
+	path.letter
+		fill: white
+		stroke: $blue
+		stroke-width: 2
+		stroke-dasharray: 600
+		stroke-dashoffset: 600
+		-webkit-animation: dash $time linear forwards, fill 0.1s 3.5s linear forwards
+
+	path#green-dot
+		fill: $green
+		-webkit-animation-delay: $time
+
+@-webkit-keyframes dash
+	to
+		stroke-dashoffset: 50
+
+@-webkit-keyframes fill
+	to
+		fill: $blue
+
+
